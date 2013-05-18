@@ -1,0 +1,22 @@
+types {
+    application/json    json;
+}
+
+server {
+    listen 443 ssl spdy;
+
+    location /api/ {
+        autoindex on;
+        root /var/www/;
+        ssi on;
+        ssi_types *;
+
+        set $SPDY_VERSION 'N/A';
+        set $SPDY_ENABLED 'false';
+
+        if ($spdy) {
+            set $SPDY_VERSION $spdy;
+            set $SPDY_ENABLED 'true';
+        }
+    }
+}

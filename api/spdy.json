@@ -1,0 +1,4 @@
+{
+    "enabled": <!--#echo var="SPDY_ENABLED" -->,
+    "version": "<!--#echo var="SPDY_VERSION" -->"
+}

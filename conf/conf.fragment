@@ -1,14 +1,16 @@
-types {
-    application/json    json;
-    application/javascript jsonp;
-}
-
 server {
     listen 443 ssl spdy;
 
     rewrite /api/repo https://github.com/dorentus/nginx-spdy-indicator-ssi;
 
     location /api/ {
+        types {
+            text/plain  txt;
+            text/html   html;
+            application/json    json;
+            application/javascript   jsonp;
+        }
+
         autoindex on;
         root /var/www/;
         ssi on;

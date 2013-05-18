@@ -9,3 +9,4 @@ API Index (https://tomodachi.name/api/)
 - https://tomodachi.name/api/spdy.enabled.txt
 - https://tomodachi.name/api/spdy.version.txt
 - https://tomodachi.name/api/spdy.html
+- https://tomodachi.name/api/spdy.jsonp?callback=callbackFunction

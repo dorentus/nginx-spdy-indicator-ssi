@@ -1,4 +1,1 @@
-<!--#set var="callback" value="callback" --><!--#if expr="$QUERY_STRING = /callback=([a-zA-Z0-9]+)/" --><!--#set var="callback" value="$1" --><!--#endif --><!--#echo var="callback" -->({
-    "enabled": <!--#echo var="SPDY_ENABLED" -->,
-    "version": "<!--#echo var="SPDY_VERSION" -->"
-});
+<!--#set var="callback" value="callback" --><!--#if expr="$QUERY_STRING = /callback=([a-zA-Z0-9]+)/" --><!--#set var="callback" value="$1" --><!--#endif --><!--#echo var="callback" -->(<!--#include file="spdy.json" -->);
